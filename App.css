@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    place-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./Components/images/veggies.jpg');
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+input,
+button {
+    color: black;
+    font-weight: bolder;
+    text-align: center;
+    padding: 25px;
+    margin: 25px;
+    background: transparent;
+    outline: transparent;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 3px black;
+}
+
+input {
+    font-size: large;
+    text-transform: capitalize;
+    cursor: text;
+    font-weight: bolder;
+}
+
+button {
+    font-size: large;
+    transition: 0.2s all linear;
+}
+
+button:active {
+    scale: 0.9;
+    transition: 0.2s all linear;
+}
+
+input::placeholder {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.display-recipe,
+.recipe-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow-y: hidden;
+}
+
+.recipe-components {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    object-fit: cover;
+    transition: 0.2s all linear;
+    overflow: hidden;
+}
+
+img {
+    margin: 5px;
+    object-fit: contain;
+}
+
+@media screen and (max-width:320px) {
+    body {
+        background-image: url('./Components/images/food-1.jpg');
+        background-size: 320px 648px;
+        min-height: 100vh;
+        place-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        object-fit: cover;
+    }
+    .input {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    input,
+    button {
+        color: black;
+        font-weight: bold;
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+        background: transparent;
+        outline: transparent;
+        border-radius: 10px;
+        box-shadow: 0 0 5px 3px black;
+    }
+    input {
+        font-size: large;
+        text-transform: capitalize;
+    }
+    button {
+        font-size: large;
+        transition: 0.2s all linear;
+    }
+    button:active {
+        scale: 0.9;
+        transition: 0.2s all linear;
+    }
+    input::placeholder {
+        color: black;
+        font-weight: bolder;
+        text-align: center;
+    }
+}
